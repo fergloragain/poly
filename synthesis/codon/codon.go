@@ -38,8 +38,13 @@ File is structured as so:
 		Table - specifies the functions that all table types must implement
 
 	Structs:
+<<<<<<< HEAD
 		codonTable - holds all information mapping codons <-> amino acids during transformations.
 		AminoAcid - holds amino acid related info for codonTable struct
+=======
+		Table - holds all information mapping codons <-> amino acids during transformations.
+		AminoAcid - holds amino acid related info for Table struct
+>>>>>>> 7f55a13 (Fix some typos)
 		Codon - holds codon related info for AminoAcid struct
 
 	Big functions that everything else is related to:
@@ -55,6 +60,7 @@ this codon bias. There's a default codonTable generator near the bottom of this 
 with a whole section on how it works and why it's gotta be that way.
 ******************************************************************************/
 
+<<<<<<< HEAD
 var (
 	errEmptyCodonTable      = errors.New("empty codon table")
 	errEmptyAminoAcidString = errors.New("empty amino acid string")
