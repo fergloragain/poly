@@ -165,7 +165,6 @@ func Optimize(aminoAcids string, codonTable Table, randomState ...int) (string, 
 // OptimizeTable weights each codon in a codon table according to input string codon frequency.
 // This function actually mutates the codonTable struct itself.
 func (table codonTable) OptimizeTable(sequence string) Table {
-
 	sequence = strings.ToUpper(sequence)
 	codonFrequencyMap := getCodonFrequency(sequence)
 
@@ -214,7 +213,6 @@ func (table codonTable) IsEmpty() bool {
 
 // Chooser is a codonTable method to convert a codon table to a chooser
 func (table codonTable) Chooser() (map[string]weightedRand.Chooser, error) {
-
 	// This maps codon tables structure to weightRand.NewChooser structure
 	codonChooser := make(map[string]weightedRand.Chooser)
 
@@ -332,7 +330,7 @@ func generateCodonTable(aminoAcids, starts string) codonTable {
 }
 
 // GetCodonTable takes the index of desired NCBI codon table and returns it.
-func GetCodonTable(index int) Table {
+func GetCodonTable(index int) codonTable {
 	return defaultCodonTablesByNumber[index]
 }
 
