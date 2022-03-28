@@ -330,7 +330,7 @@ func generateCodonTable(aminoAcids, starts string) codonTable {
 }
 
 // GetCodonTable takes the index of desired NCBI codon table and returns it.
-func GetCodonTable(index int) codonTable {
+func GetCodonTable(index int) Table {
 	return defaultCodonTablesByNumber[index]
 }
 
